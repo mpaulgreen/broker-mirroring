@@ -33,8 +33,8 @@ import org.apache.qpid.jms.JmsConnectionFactory;
 public class BrokerMirroring {
 
     public static void main(final String[] args) throws Exception {
-        ConnectionFactory cfServer0 = new JmsConnectionFactory("amqp://192.168.2.12:5772");
-        ConnectionFactory cfServer1 = new JmsConnectionFactory("amqp://192.168.2.13:5772");
+        ConnectionFactory cfServer0 = new JmsConnectionFactory("amqp://192.168.2.11:61616");
+        ConnectionFactory cfServer1 = new JmsConnectionFactory("amqp://192.168.2.11:61617");
 
         try (Connection connection = cfServer0.createConnection()) {
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
